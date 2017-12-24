@@ -1,16 +1,36 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import {Platform,View,StatusBar} from 'react-native';
+import {TabNavigator} from 'react-navigation';
+import Search from './src/screens/search';
+import Favorites from './src/screens/favorites';
+
+
+const Tabs = TabNavigator({
+  Search: {
+    screen: Search
+  },
+  Favorites: {
+    screen: Favorites
+  }
+}, {
+  tabBarPosition: 'bottom',
+  tabBarOptions: {
+    showIcon: true,
+    showLabel: true,
+    initialRouteName: Search,
+    indicatorStyle: {
+      height: 3,
+      backgroundColor: '#00C9B5'
+
+    },
+    style: {
+      backgroundColor: "#006A98",
+      borderTopWidth: 0,
+      borderColor: "#3f101c",
+      height: 65
+    }
+  }
+})
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -19,24 +39,24 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+      <View style={{
+        flex: 1
+      }}>
+        <View
+          style={{
+          backgroundColor: '#006A98',
+          height: 24
+        }}></View>
+        <StatusBar hidden={false}/>
+        <Tabs/>
       </View>
     );
   }
 }
-
+/*
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -55,3 +75,4 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+*/
