@@ -50,7 +50,7 @@ export default class App extends Component {
           backgroundColor: '#006A98',
           height: 24
         }}></View>
-        <StatusBar hidden={false}/>
+        <StatusBar hidden={false} translucent={true}/>
         <Tabs/>
       </View>
     );

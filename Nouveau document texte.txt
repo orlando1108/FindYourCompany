@@ -1,0 +1,36 @@
+fevrier 
+ bio+autre
+58 10 66 6 8  40 = 180
+ auchan
+20 3 7 5  =35
+ autre
+52 131
+
+janvier
+
+bio
+53 8 38 36 11 8 5  35 = 194
+
+auchan
+10 5 9 19 8 25 61 16 4 6 = 163 + 100
+
+autre
+zalando 50 
+
+ikea
+8 
+
+clos du marc 11 8 5
+
+globalegrow 27
+
+calzedonia 16
+
+
+// air bnb 176 
+
+u 9
+
+safym 11
+
+
